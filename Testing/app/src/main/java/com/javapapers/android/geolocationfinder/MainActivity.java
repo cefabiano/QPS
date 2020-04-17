@@ -68,12 +68,13 @@ public class MainActivity extends Activity {
     protected LocationListener locationListener;
     protected Location curr_loc;
     TextView txtLat, up1, up2, up3, up4;
-    Button button;
+    Button button, button2;
     protected String reason;
 
     protected Context context;
     ImageView icon, map, coordBG,logBG;
     int viewHeight, viewWidth;
+    double posModifierX = -1.84047826, posModifierY = -1.17059355, lastPosX = 0, lastPosY = 0;
     String lat;
     String provider;
     protected String latitude, longitude;
@@ -94,6 +95,7 @@ public class MainActivity extends Activity {
         coordBG = findViewById(R.id.coordBG);
         map = findViewById(R.id.imageView);
         button = findViewById(R.id.button);
+        button2 = findViewById(R.id.button2);
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -157,6 +159,7 @@ public class MainActivity extends Activity {
                     up4.setVisibility(View.INVISIBLE);
                     coordBG.setVisibility(View.INVISIBLE);
                     txtLat.setVisibility(View.INVISIBLE);
+                    button2.setVisibility(View.INVISIBLE);
                 } else {
                     logBG.setVisibility(View.VISIBLE);
                     up1.setVisibility(View.VISIBLE);
@@ -165,7 +168,15 @@ public class MainActivity extends Activity {
                     up4.setVisibility(View.VISIBLE);
                     coordBG.setVisibility(View.VISIBLE);
                     txtLat.setVisibility(View.VISIBLE);
+                    button2.setVisibility(View.VISIBLE);
                 }
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                posModifierX = -72.91138041 - lastPosX;
+                posModifierY = 41.41633619 - lastPosY;
             }
         });
     }
@@ -182,8 +193,6 @@ public class MainActivity extends Activity {
 
             txtLat.setText("Longitude:" + loc.getLongitude() + ", Latitude:" + loc.getLatitude());
 
-            double posModifierX = -1.84047826, posModifierY = -1.17059355;
-
             int y = (int) ((41.41802426 - (loc.getLatitude() + posModifierY)) / 0.000002595);
             y = (viewHeight / 2) - y;
 
@@ -191,6 +200,8 @@ public class MainActivity extends Activity {
             x = (viewWidth / 2) - x;
             //up1.setText(String.valueOf(x));
 
+            lastPosX = loc.getLongitude();
+            lastPosY = loc.getLatitude();
             MarginLayoutParams marginParams = new MarginLayoutParams(map.getLayoutParams());
             marginParams.setMargins(x, y, 0, 0);
             FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(marginParams);

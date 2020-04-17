@@ -119,6 +119,15 @@
         android:text="Show Log"
         android:textSize="10sp" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="600px"
+        android:layout_height="200px"
+        android:layout_marginLeft="830px"
+        android:layout_marginTop="150px"
+        android:text="Reset Coords"
+        android:textSize="10sp" />
+
     <ImageView
         android:id="@+id/coordBG"
         android:layout_width="1300px"
