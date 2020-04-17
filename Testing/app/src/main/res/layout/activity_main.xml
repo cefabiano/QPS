@@ -46,42 +46,112 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textview1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:elevation="1dp"
-        android:text="@string/hello_world" />
-
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="wrap_content"
-        android:layout_height="22dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="19dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="557dp"
-        android:elevation="2dp"
-        android:src="@android:drawable/ic_menu_mylocation" />
+        android:layout_width="120px"
+        android:layout_height="120px"
+        android:layout_marginLeft="660px"
+        android:layout_marginTop="960px"
+        android:elevation="10dp"
+        android:src="@drawable/ic_action_name" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logBG"
+        android:layout_width="1100px"
+        android:layout_height="400px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="2000px"
+        android:elevation="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/whitebox"
+        android:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/updater1"
+        android:layout_width="1000px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="60px"
+        android:layout_marginBottom="40px"
+        android:ellipsize="end"
+        android:elevation="8dp"
+        android:text="update 1" />
+
+    <TextView
+        android:id="@+id/updater2"
+        android:layout_width="1000px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="60px"
+        android:layout_marginBottom="120px"
+        android:ellipsize="end"
+        android:elevation="8dp"
+        android:text="update 2" />
+
+    <TextView
+        android:id="@+id/updater3"
+        android:layout_width="1000px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="60px"
+        android:layout_marginBottom="200px"
+        android:ellipsize="end"
+        android:elevation="8dp"
+        android:text="update 3" />
+
+    <TextView
+        android:id="@+id/updater4"
+        android:layout_width="1000px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="60px"
+        android:layout_marginBottom="280px"
+        android:ellipsize="end"
+        android:elevation="8dp"
+        android:text="update 3" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300px"
+        android:layout_height="200px"
+        android:layout_marginLeft="1130px"
+        android:layout_marginTop="2200px"
+        android:text="Show Log"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/coordBG"
+        android:layout_width="1300px"
+        android:layout_height="100px"
+        android:layout_marginLeft="70px"
+        android:layout_marginTop="30px"
+        android:elevation="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/whitebox"
+        android:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/coord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="85dp"
-        android:src="@drawable/york_hill_map" />
+        android:layout_marginTop="46px"
+        android:layout_centerHorizontal="true"
+        android:elevation="8dp"
+        android:text="@string/hello_world" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">ad
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="2152px"
+            android:layout_height="1668px"
+            android:layout_marginLeft="720px"
+            android:layout_marginTop="1080px"
+            android:scrollbarStyle="insideInset"
+            android:src="@drawable/york_hill_map" />
+
+    </FrameLayout>
 
 </RelativeLayout>
